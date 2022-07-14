@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: native
+  application:
+    name: ConfigServer
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:///${user.home}/CentralizedConfiguration
+  security:
+    user:
+      name: centralConfig
+      password: '{cipher}34ca7e777ebf6d12dd4092efa0dc31fdb932a248b314902c0ec29e6b08f58642'
+
+server:
+  port: 9000
+
+encrypt:
+  key: centralEncryptionKey
