@@ -5,7 +5,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-// This configuration is needed for disabling security when it's needed to encrypt sensitive information using /encrypt URL
+// This configuration is needed for disabling security for encrypting sensitive information using /encrypt URL
 //@Configuration
 //@EnableWebSecurity
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
