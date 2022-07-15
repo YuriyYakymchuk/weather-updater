@@ -1,0 +1,51 @@
+{
+  "type": "record",
+  "name": "WeatherMessageData",
+  "namespace": "com.yuriy.weather.publisher.events.schemas",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "Unique id which consists of country:city:time. E.g. Ukraine:Lviv:34343222121212"
+    },
+    {
+      "name": "country",
+      "type": "string"
+    },
+    {
+      "name": "city",
+      "type": "string"
+    },
+    {
+      "name": "temperature",
+      "type": "double"
+    },
+    {
+      "name": "humidity",
+      "type": "int"
+    },
+    {
+      "name": "windSpeed",
+      "type": "int"
+    },
+    {
+      "name": "time",
+      "type": "long"
+    }
+  ]
+}
+{
+  "type": "record",
+  "name": "WeatherMessageKey",
+  "namespace": "com.yuriy.weather.publisher.events.schemas",
+  "fields": [
+    {
+      "name": "country",
+      "type": "string"
+    },
+    {
+      "name": "city",
+      "type": "string"
+    }
+  ]
+}

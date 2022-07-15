@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "WeatherMessageKey",
+  "namespace": "com.yuriy.weather.publisher.events.schemas",
+  "fields": [
+    {
+      "name": "country",
+      "type": "string"
+    },
+    {
+      "name": "city",
+      "type": "string"
+    }
+  ]
+}
