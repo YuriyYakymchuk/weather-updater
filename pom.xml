@@ -86,7 +86,7 @@
 
     <modules>
         <module>config-server</module>
-        <module>weatherData-publisher</module>
+        <module>weather-publisher</module>
     </modules>
 
 </project>
