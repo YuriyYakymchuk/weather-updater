@@ -1,0 +1,23 @@
+config:
+  test: Value
+
+spring:
+  kafka:
+    properties:
+      bootstrap:
+        servers: <<server:port>>
+  cloud:
+    stream:
+      default:
+        producer:
+          useNativeEncoding: true
+      bindings:
+        output:
+          destination: <<topic name>>
+          content-type: application/*+avro
+      kafka:
+        binder:
+          producer-properties:
+            schema.registry.url: <<http://host:port>>
+            key.serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+            value.serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
