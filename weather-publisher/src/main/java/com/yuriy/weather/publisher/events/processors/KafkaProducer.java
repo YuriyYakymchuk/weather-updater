@@ -31,6 +31,7 @@ public class KafkaProducer implements Producer {
         messagePayload.setHumidity(weatherData.getHumidity());
         messagePayload.setWindSpeed(weatherData.getWindSpeed());
         messagePayload.setTime(weatherData.getTime().toEpochSecond(ZoneOffset.UTC));
+        messagePayload.setCloudy(weatherData.getCloudy());
 
         WeatherMessageKey messageKey = new WeatherMessageKey();
         messageKey.setCountry(weatherData.getCountry());

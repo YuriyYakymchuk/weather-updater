@@ -21,4 +21,6 @@ public class WeatherData {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime time;
 
+    private String cloudy;
+
 }

@@ -2,9 +2,11 @@ package com.yuriy.weather.publisher.services;
 
 import com.yuriy.weather.publisher.events.processors.Producer;
 import com.yuriy.weather.publisher.models.WeatherData;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class WeatherServiceImpl implements WeatherService {
 
     private final Producer producer;
@@ -15,7 +17,9 @@ public class WeatherServiceImpl implements WeatherService {
 
     @Override
     public boolean publishWeatherMessage(WeatherData weatherDataRecord) {
-        return producer.produceWeatherMessage(weatherDataRecord);
+        boolean result =  producer.produceWeatherMessage(weatherDataRecord);
+        log.info("Result of publishing the message: " + result);
+        return result;
     }
 
 }
