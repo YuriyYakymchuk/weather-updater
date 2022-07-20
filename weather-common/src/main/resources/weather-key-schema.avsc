@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "WeatherMessageKey",
-  "namespace": "com.yuriy.weather.publisher.events.schemas",
+  "namespace": "com.yuriy.weather.events.models",
   "fields": [
     {
       "name": "country",

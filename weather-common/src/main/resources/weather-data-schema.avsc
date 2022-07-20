@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "WeatherMessageData",
-  "namespace": "com.yuriy.weather.publisher.events.schemas",
+  "namespace": "com.yuriy.weather.events.models",
   "fields": [
     {
       "name": "id",
@@ -38,7 +38,7 @@
         "null",
         "string"
         ],
-      "default": null
+      "default": ""
     }
   ]
 }

@@ -3,18 +3,18 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.yuriy.weather.publisher.events.schemas;
+package com.yuriy.weather.events.models;
 
-import org.apache.avro.message.BinaryMessageDecoder;
-import org.apache.avro.message.BinaryMessageEncoder;
-import org.apache.avro.message.SchemaStore;
 import org.apache.avro.specific.SpecificData;
+import org.apache.avro.message.BinaryMessageEncoder;
+import org.apache.avro.message.BinaryMessageDecoder;
+import org.apache.avro.message.SchemaStore;
 
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 704217637276131059L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"WeatherMessageData\",\"namespace\":\"com.yuriy.weather.publisher.events.schemas\",\"fields\":[{\"name\":\"id\",\"type\":\"string\",\"doc\":\"Unique id which consists of country:city:time. E.g. Ukraine:Lviv:34343222121212\"},{\"name\":\"country\",\"type\":\"string\"},{\"name\":\"city\",\"type\":\"string\"},{\"name\":\"temperature\",\"type\":\"double\"},{\"name\":\"humidity\",\"type\":\"int\"},{\"name\":\"windSpeed\",\"type\":\"int\"},{\"name\":\"time\",\"type\":\"long\"},{\"name\":\"cloudy\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
+  private static final long serialVersionUID = 3932406591394661766L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"WeatherMessageData\",\"namespace\":\"com.yuriy.weather.events.models\",\"fields\":[{\"name\":\"id\",\"type\":\"string\",\"doc\":\"Unique id which consists of country:city:time. E.g. Ukraine:Lviv:34343222121212\"},{\"name\":\"country\",\"type\":\"string\"},{\"name\":\"city\",\"type\":\"string\"},{\"name\":\"temperature\",\"type\":\"double\"},{\"name\":\"humidity\",\"type\":\"int\"},{\"name\":\"windSpeed\",\"type\":\"int\"},{\"name\":\"time\",\"type\":\"long\"},{\"name\":\"cloudy\",\"type\":[\"null\",\"string\"],\"default\":\"\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -255,8 +255,8 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
    * Creates a new WeatherMessageData RecordBuilder.
    * @return A new WeatherMessageData RecordBuilder
    */
-  public static com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder newBuilder() {
-    return new com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder();
+  public static com.yuriy.weather.events.models.WeatherMessageData.Builder newBuilder() {
+    return new com.yuriy.weather.events.models.WeatherMessageData.Builder();
   }
 
   /**
@@ -264,8 +264,8 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
    * @param other The existing builder to copy.
    * @return A new WeatherMessageData RecordBuilder
    */
-  public static com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder newBuilder(com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder other) {
-    return new com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder(other);
+  public static com.yuriy.weather.events.models.WeatherMessageData.Builder newBuilder(com.yuriy.weather.events.models.WeatherMessageData.Builder other) {
+    return new com.yuriy.weather.events.models.WeatherMessageData.Builder(other);
   }
 
   /**
@@ -273,8 +273,8 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
    * @param other The existing instance to copy.
    * @return A new WeatherMessageData RecordBuilder
    */
-  public static com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder newBuilder(com.yuriy.weather.publisher.events.schemas.WeatherMessageData other) {
-    return new com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder(other);
+  public static com.yuriy.weather.events.models.WeatherMessageData.Builder newBuilder(com.yuriy.weather.events.models.WeatherMessageData other) {
+    return new com.yuriy.weather.events.models.WeatherMessageData.Builder(other);
   }
 
   /**
@@ -302,7 +302,7 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder other) {
+    private Builder(com.yuriy.weather.events.models.WeatherMessageData.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -342,7 +342,7 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
      * Creates a Builder by copying an existing WeatherMessageData instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.yuriy.weather.publisher.events.schemas.WeatherMessageData other) {
+    private Builder(com.yuriy.weather.events.models.WeatherMessageData other) {
             super(SCHEMA$);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -393,7 +393,7 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
       * @param value The value of 'id'.
       * @return This builder.
       */
-    public com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder setId(java.lang.CharSequence value) {
+    public com.yuriy.weather.events.models.WeatherMessageData.Builder setId(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.id = value;
       fieldSetFlags()[0] = true;
@@ -415,7 +415,7 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
       * Unique id which consists of country:city:time. E.g. Ukraine:Lviv:34343222121212
       * @return This builder.
       */
-    public com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder clearId() {
+    public com.yuriy.weather.events.models.WeatherMessageData.Builder clearId() {
       id = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -434,7 +434,7 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
       * @param value The value of 'country'.
       * @return This builder.
       */
-    public com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder setCountry(java.lang.CharSequence value) {
+    public com.yuriy.weather.events.models.WeatherMessageData.Builder setCountry(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.country = value;
       fieldSetFlags()[1] = true;
@@ -454,7 +454,7 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
       * Clears the value of the 'country' field.
       * @return This builder.
       */
-    public com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder clearCountry() {
+    public com.yuriy.weather.events.models.WeatherMessageData.Builder clearCountry() {
       country = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -473,7 +473,7 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
       * @param value The value of 'city'.
       * @return This builder.
       */
-    public com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder setCity(java.lang.CharSequence value) {
+    public com.yuriy.weather.events.models.WeatherMessageData.Builder setCity(java.lang.CharSequence value) {
       validate(fields()[2], value);
       this.city = value;
       fieldSetFlags()[2] = true;
@@ -493,7 +493,7 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
       * Clears the value of the 'city' field.
       * @return This builder.
       */
-    public com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder clearCity() {
+    public com.yuriy.weather.events.models.WeatherMessageData.Builder clearCity() {
       city = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -512,7 +512,7 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
       * @param value The value of 'temperature'.
       * @return This builder.
       */
-    public com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder setTemperature(double value) {
+    public com.yuriy.weather.events.models.WeatherMessageData.Builder setTemperature(double value) {
       validate(fields()[3], value);
       this.temperature = value;
       fieldSetFlags()[3] = true;
@@ -532,7 +532,7 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
       * Clears the value of the 'temperature' field.
       * @return This builder.
       */
-    public com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder clearTemperature() {
+    public com.yuriy.weather.events.models.WeatherMessageData.Builder clearTemperature() {
       fieldSetFlags()[3] = false;
       return this;
     }
@@ -550,7 +550,7 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
       * @param value The value of 'humidity'.
       * @return This builder.
       */
-    public com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder setHumidity(int value) {
+    public com.yuriy.weather.events.models.WeatherMessageData.Builder setHumidity(int value) {
       validate(fields()[4], value);
       this.humidity = value;
       fieldSetFlags()[4] = true;
@@ -570,7 +570,7 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
       * Clears the value of the 'humidity' field.
       * @return This builder.
       */
-    public com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder clearHumidity() {
+    public com.yuriy.weather.events.models.WeatherMessageData.Builder clearHumidity() {
       fieldSetFlags()[4] = false;
       return this;
     }
@@ -588,7 +588,7 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
       * @param value The value of 'windSpeed'.
       * @return This builder.
       */
-    public com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder setWindSpeed(int value) {
+    public com.yuriy.weather.events.models.WeatherMessageData.Builder setWindSpeed(int value) {
       validate(fields()[5], value);
       this.windSpeed = value;
       fieldSetFlags()[5] = true;
@@ -608,7 +608,7 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
       * Clears the value of the 'windSpeed' field.
       * @return This builder.
       */
-    public com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder clearWindSpeed() {
+    public com.yuriy.weather.events.models.WeatherMessageData.Builder clearWindSpeed() {
       fieldSetFlags()[5] = false;
       return this;
     }
@@ -626,7 +626,7 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
       * @param value The value of 'time'.
       * @return This builder.
       */
-    public com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder setTime(long value) {
+    public com.yuriy.weather.events.models.WeatherMessageData.Builder setTime(long value) {
       validate(fields()[6], value);
       this.time = value;
       fieldSetFlags()[6] = true;
@@ -646,7 +646,7 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
       * Clears the value of the 'time' field.
       * @return This builder.
       */
-    public com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder clearTime() {
+    public com.yuriy.weather.events.models.WeatherMessageData.Builder clearTime() {
       fieldSetFlags()[6] = false;
       return this;
     }
@@ -664,7 +664,7 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
       * @param value The value of 'cloudy'.
       * @return This builder.
       */
-    public com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder setCloudy(java.lang.CharSequence value) {
+    public com.yuriy.weather.events.models.WeatherMessageData.Builder setCloudy(java.lang.CharSequence value) {
       validate(fields()[7], value);
       this.cloudy = value;
       fieldSetFlags()[7] = true;
@@ -684,7 +684,7 @@ public class WeatherMessageData extends org.apache.avro.specific.SpecificRecordB
       * Clears the value of the 'cloudy' field.
       * @return This builder.
       */
-    public com.yuriy.weather.publisher.events.schemas.WeatherMessageData.Builder clearCloudy() {
+    public com.yuriy.weather.events.models.WeatherMessageData.Builder clearCloudy() {
       cloudy = null;
       fieldSetFlags()[7] = false;
       return this;

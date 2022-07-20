@@ -1,7 +1,7 @@
 package com.yuriy.weather.publisher.events.processors;
 
-import com.yuriy.weather.publisher.events.schemas.WeatherMessageData;
-import com.yuriy.weather.publisher.events.schemas.WeatherMessageKey;
+import com.yuriy.weather.events.models.WeatherMessageData;
+import com.yuriy.weather.events.models.WeatherMessageKey;
 import com.yuriy.weather.publisher.models.WeatherData;
 import org.springframework.cloud.stream.messaging.Processor;
 import org.springframework.kafka.support.KafkaHeaders;

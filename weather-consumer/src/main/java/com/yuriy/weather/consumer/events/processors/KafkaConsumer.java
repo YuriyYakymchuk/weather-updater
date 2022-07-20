@@ -1,8 +1,8 @@
 package com.yuriy.weather.consumer.events.processors;
 
-import com.yuriy.weather.entities.WeatherEntity;
-import com.yuriy.weather.publisher.events.schemas.WeatherMessageData;
 import com.yuriy.weather.consumer.services.WeatherService;
+import com.yuriy.weather.entities.WeatherEntity;
+import com.yuriy.weather.events.models.WeatherMessageData;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.cloud.stream.messaging.Processor;
 import org.springframework.stereotype.Service;
