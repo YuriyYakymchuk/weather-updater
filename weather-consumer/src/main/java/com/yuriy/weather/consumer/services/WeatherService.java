@@ -1,6 +1,7 @@
 package com.yuriy.weather.consumer.services;
 
-import com.yuriy.weather.consumer.entities.WeatherEntity;
+
+import com.yuriy.weather.entities.WeatherEntity;
 
 public interface WeatherService {
 

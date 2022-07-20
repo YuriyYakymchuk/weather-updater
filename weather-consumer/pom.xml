@@ -5,17 +5,23 @@
     <parent>
         <groupId>com.yuriy</groupId>
         <artifactId>weather-updater</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
 
     <groupId>com.yuriy</groupId>
     <artifactId>weather-consumer</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>weather-consumer</name>
     <description>Consumes weather records from Kafka MB</description>
     <packaging>jar</packaging>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.yuriy</groupId>
+            <artifactId>weather-common</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -68,5 +74,14 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

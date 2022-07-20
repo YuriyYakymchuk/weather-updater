@@ -1,6 +1,6 @@
 package com.yuriy.weather.consumer.events.processors;
 
-import com.yuriy.weather.consumer.events.model.WeatherMessageData;
+import com.yuriy.weather.publisher.events.schemas.WeatherMessageData;
 
 public interface Consumer {
 

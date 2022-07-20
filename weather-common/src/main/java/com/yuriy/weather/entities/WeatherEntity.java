@@ -1,4 +1,4 @@
-package com.yuriy.weather.consumer.entities;
+package com.yuriy.weather.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity(name = "Weather")
-@Table(name = "Weather")
+@Table(name = "weather")
 @Data
 @Builder
 @NoArgsConstructor

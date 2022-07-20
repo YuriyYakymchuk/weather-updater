@@ -1,4 +1,4 @@
-CREATE TABLE `Weather` (
+CREATE TABLE `weather` (
                            `ID` int unsigned NOT NULL AUTO_INCREMENT,
                            `Country` varchar(255) NOT NULL,
                            `City` varchar(255) NOT NULL,
