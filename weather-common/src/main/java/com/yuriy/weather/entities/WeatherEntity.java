@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity(name = "Weather")
-@Table(name = "weather")
+@Table(name = "Weather")
 @Data
 @Builder
 @NoArgsConstructor

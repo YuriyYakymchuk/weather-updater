@@ -1,5 +1,3 @@
-config:
-  test: Value
 
 spring:
   datasource:
@@ -14,19 +12,22 @@ spring:
   kafka:
     properties:
       bootstrap:
-        servers: <<server:port>>
+        servers: <<host:port>>
   cloud:
     stream:
       default:
-        producer:
+        consumer:
           useNativeEncoding: true
       bindings:
-        output:
-          destination: <<topic name>>
+        input:
+          destination: weather-updates
           content-type: application/*+avro
+          group: yuriy-local-1
+          concurrency: 1
       kafka:
         binder:
-          producer-properties:
+          consumer-properties:
             schema.registry.url: <<http://host:port>>
-            key.serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
-            value.serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+            key.deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+            value.deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+            specific.avro.reader: true

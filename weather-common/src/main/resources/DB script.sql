@@ -1,8 +1,8 @@
-CREATE TABLE `weather` (
+CREATE TABLE `Weather` (
                            `ID` int unsigned NOT NULL AUTO_INCREMENT,
                            `Country` varchar(255) NOT NULL,
                            `City` varchar(255) NOT NULL,
-                           `Temperature` decimal(3,2) NOT NULL,
+                           `Temperature` decimal(5,2) NOT NULL,
                            `Humidity` int unsigned NOT NULL,
                            `WindSpeed` int unsigned NOT NULL,
                            `Cloudy` varchar(255) NOT NULL,
