@@ -42,4 +42,8 @@ public class WeatherEntity implements Serializable {
 
     @Column(name = "Time")
     private LocalDateTime time;
+
+    @Column(name = "CreatedAt")
+    private LocalDateTime createdAt;
+
 }

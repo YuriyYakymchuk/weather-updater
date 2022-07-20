@@ -97,6 +97,7 @@
         <module>config-server</module>
         <module>weather-publisher</module>
         <module>weather-consumer</module>
+        <module>weather-measurement</module>
     </modules>
 
 </project>

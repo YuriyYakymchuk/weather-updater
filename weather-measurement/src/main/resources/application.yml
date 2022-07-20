@@ -1,0 +1,18 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: WeatherMeasurement
+  config:
+    import: optional:configserver:http://localhost:9000
+  cloud:
+    config:
+      fail-fast: true
+      retry:
+        initial-interval: 2000
+        max-attempts: 3
+        max-interval: 3000
+      username: centralConfig
+      password: 2Ski!1C5#2oG
+

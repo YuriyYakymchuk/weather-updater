@@ -9,13 +9,14 @@
     </parent>
 
     <groupId>com.yuriy</groupId>
-    <artifactId>weather-publisher</artifactId>
+    <artifactId>weather-measurement</artifactId>
     <version>1.0.0</version>
-    <name>weather-publisher</name>
-    <description>Publisher of weather data</description>
+    <name>weather-measurement</name>
+    <description>REST API for retrieving weather measurements</description>
     <packaging>jar</packaging>
 
     <dependencies>
+
         <dependency>
             <groupId>com.yuriy</groupId>
             <artifactId>weather-common</artifactId>
@@ -38,19 +39,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-stream-binder-kafka</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-stream-schema</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
         </dependency>
 
         <dependency>
