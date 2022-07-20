@@ -18,7 +18,7 @@ public class WeatherServiceImpl implements WeatherService {
     @Override
     public boolean publishWeatherMessage(WeatherData weatherDataRecord) {
         boolean result =  producer.produceWeatherMessage(weatherDataRecord);
-        log.info("Result of publishing the message: " + result);
+        log.info("Result of publishing the message: " + (result ? "Success" : "Failure"));
         return result;
     }
 
